@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Personality Predictor</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min1.css" rel="stylesheet">
+    <script src="js/jquery1.js"></script>
+    <script src="js/bootstrap.min1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/canvasjs.min.js"></script>
+    <script src="js/graphs.js"></script>
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img src="images/plogo.png" class="logo navbar-brand topnav" />
+
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<div class="intro-header-l">
+        <div class="row mainrow">
+            <div class="col-lg-3" style="background-color: #2F4050">
+                <div class="widget-head-color-box navy-bg p-lg text-center">
+                    <div class="m-b-md">
+                        <h2 class="font-bold no-margins p-h" id="pname">
+                            Alex Smith
+                        </h2>
+                    </div>
+                    <img src="images/a4.jpg" class="img-circle circle-border m-b-md" id="pimage" alt="profile">
+                    <div style="padding-top: 20px;padding-bottom: 27px;">
+                        <small id="pid">Founder of Groupeq</small>
+
+                    </div>
+                </div>
+                <div class="widget style1 navy-bg">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <i class="fa fa-thumbs-up fa-5x"></i>
+                        </div>
+                        <div class="col-xs-8 text-right">
+                            <span> Total Words Count </span>
+                            <h2 class="font-bold" id="wordcount"></h2>
+                        </div>
+                        <small id="wdcount"></small>
+                    </div>
+                </div>
+                <nav class="navbar-default2 navbar-static-side" role="navigation">
+                    <div class="sidebar-collapse">
+                        <ul class="nav metismenu" id="side-menu">
+                            <li>
+                                <a href="#" id="big"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Big Five</span><span class="fa arrow"></span></a>
+                            </li>
+                            <li>
+                                <a href="#" id="cusneed"><i class="fa fa-pie-chart"></i> <span class="nav-label">Consumer Needs</span>  </a>
+                            </li>
+                            <li  >
+                                <a href="#" id="val"><i class="fa fa-flask"></i> <span class="nav-label">Values</span></a>
+                            </li>
+                            <li>
+                                <a href="#" id="jdata"><i class="fa fa-edit"></i> <span class="nav-label">JSON</span><span class="fa arrow"></span></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+
+
+            </div>
+            <div class="col-lg-9 graphs" id="conclusion" style="background-color:white;margin-top: 16px;padding-left: 0px;padding-right: 0px;border-bottom: 2px solid;">
+                <div class="col-lg-6" id="summarytext" style="color: black;text-align: left;padding: 30px 5px 0px 30px;">
+                </div>
+                <div class="col-lg-6" style="color: black;text-align: left;padding: 81px 5px 0px 30px;" id="likelydata">
+                </div>
+            </div>
+            <div class="col-lg-9 graphs"   id="bigfive" style="background-color:white;margin-top: 16px;padding-left: 0px;padding-right: 0px;">
+                <div class="row" style="border: 2px solid #1AB394">
+                    <div class="col-lg-3" id="circlechartContainer1" style="height: 300px"></div>
+                    <div class="col-lg-6">
+                    <div id="barchartContainer1" style="height: 300px;"></div>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4 style="color: black;padding-top: 13%" id="dh1">Openness</h4>
+                        <p style="width: 100%;height: 100%;color: black;" id="dp1">Openness to experience. Higher: Intellectually curious, emotionally-aware, sensitive to beauty and willing to try new things.
+                            Lower: Preferring the plain, straightforward, and obvious over the complex, ambiguous, and subtle.</p>
+                    </div>
+                </div>
+                <div class="row" style="border: 2px solid #1AB394">
+                        <div class="col-lg-3" id="circlechartContainer2" style="height: 300px">
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="barchartContainer2" style="height: 300px;"></div>
+                        </div>
+                    <div class="col-lg-3">
+                        <h4 style="color: black;padding-top: 13%">Agreeableness</h4>
+                        <p style="width: 100%;height: 100%;color: black;">Higher: Value getting along with others. They have a more optimistic view of human nature.
+                            Lower: Value self interests over others. They are more skeptical of others' motives.</p>
+                    </div>
+                </div>
+                <div class="row" style="border: 1px solid #1AB394">
+                        <div class="col-lg-3" id="circlechartContainer3" style="height: 300px">
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="barchartContainer3" style="height: 300px;"></div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4 style="color: black;padding-top: 13%">Introversion/Extraversion</h4>
+                            <p style="width: 100%;height: 100%;color: black;">Higher: More energetic and pronounced engagement with the external world. Likes high group visibility, talking, and asserting themselves.
+                                Lower: Needs less stimulation and are more independent of their social world. It does not mean they are shy, un-friendly, or antisocial.</p>
+                        </div>
+                </div>
+                <div class="row" style="border: 1px solid #1AB394">
+                        <div class="col-lg-3" id="circlechartContainer4" style="height: 300px">
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="barchartContainer4" style="height: 300px;"></div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4 style="color: black;padding-top: 13%">Emotional range</h4>
+                            <p style="width: 100%;height: 100%;color: black;">Higher: More likely to have negative emotions or get upset. It could mean they are going through a tough time.
+                                Lower: More calm and less likely to get upset. It does not mean they are positive, or happy people.</p>
+                        </div>
+                </div>
+                <div class="row" style="border: 1px solid #1AB394">
+                        <div class="col-lg-3" id="circlechartContainer5" style="height: 300px">
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="barchartContainer5" style="height: 300px;"></div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4 style="color: black;padding-top: 13%">Conscientiousness</h4>
+                            <p style="width: 100%;height: 100%;color: black;">Higher: More self-disciplined, dutiful, or aiming for achievement against measures or outside expectations.
+                                Lower: More likely to prefer the spontaneous over the planned.</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-9 graphs" id="customerneed" style="background-color:white;margin-top: 16px;padding-left: 0px;padding-right: 0px;">
+                    <div class="col-lg-12">
+                        <h4 style="color:black;font-size: 27px;padding-top: 26px;"> Customer Needs </h4>
+                        <p style="color:black">You consider both tradition and achieving success to guide a large part of what you do. You highly respect the groups you belong to and follow their guidance</p>
+                    </div>
+                    <div class="col-lg-12" style="padding-top: 5%">
+                        <div id="chartContainercustomer" style="height: 400px; width: 100%;"></div>
+                    </div>
+
+                </div>
+            <div class="col-lg-9 graphs" id="value" style="background-color:white;margin-top: 16px;padding-left: 0px;padding-right: 0px;">
+                    <div class="col-lg-12">
+                    <h4 style="color:black;font-size: 27px;padding-top: 26px;"> Values </h4>
+                        <p style="color:black">You consider both tradition and achieving success to guide a large part of what you do. You highly respect the groups you belong to and follow their guidance</p>
+                    </div>
+                    <div class="col-lg-12" style="padding-top: 6%">
+                        <div id="barchartContainervalue" style="width: 100%"></div>
+                    </div>
+
+            </div>
+            <div class="col-lg-9 graphs" id="json" style="background-color:white;margin-top: 16px;padding-left: 0px;padding-right: 0px;">
+
+                    <p class="col-lg-12">
+                        <h4 style="color:black;font-size: 27px;padding-top: 26px;"> Text(Input) </h4>
+                        <textarea id="textdata" rows="10" style="width: 80%;color:black"></textarea>
+                    <div class="col-lg-12" style="padding-top: 1%">
+                        <h4 style="color:black;font-size: 27px;padding-top: 26px;"> Json(Output) </h4>
+                        <textarea id="jsondata" rows="10" style="width: 80%;color:black"></textarea>
+                    </div>
+
+                </div>
+        </div>
+</div>
+</body>
+</html>

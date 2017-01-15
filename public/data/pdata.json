@@ -1,0 +1,13 @@
+{
+  "first_name": "Custom",
+  "last_name": " Text",
+  "picture": {
+    "data": {
+      "height": 130,
+      "is_silhouette": false,
+      "url": "images/a5.png",
+      "width": 130
+    }
+  },
+  "id": "Personality Predictor"
+}

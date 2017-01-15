@@ -1,0 +1,71 @@
+.logo{
+    width: 64%;
+    margin-left: 25%;
+
+}
+.navbar{
+    min-height: 98px !important;
+}
+@media (min-width: 768px) {
+    .navbar-nav {
+        margin-top: 2.4% !important;
+    }
+}
+navbar-fixed-top{
+    bottom: 0px !important;
+    height: 54px !important;
+}
+.slides{
+    background-color: #4F6128;
+    width:100%;
+    height:500px
+}
+.twitter{
+ background-color:#1DA1F2 !important;
+}
+
+.input--form2{
+    margin-top: 13%;
+}
+.base--button{
+    margin: 0px !important;
+    width: 35%;
+    height: 51px;
+}
+.mainslider .heading{
+font-family: cursive;
+font-size: 49px;
+font-weight: bolder;
+}
+
+.mainslider p{
+    font-family: cursive;
+    font-size: 18px;
+}
+.mainslider li {
+    font-size: 17px;
+    font-family: cursive;
+    margin-left: 10%;
+}
+.mainslider{
+    margin-top: 11%;
+}
+.videoslider{
+    margin-top:12%;
+}
+.copyright {
+    text-align: center;
+    margin-bottom: 0px;
+}
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+@media(min-width:768px) {
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
