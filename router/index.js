@@ -8,11 +8,9 @@ module.exports = function (app) {
 
   // Routes
   app.use('/', require('./routes/homepage'));
-  app.use('/front', require('./routes/front'));
+  app.use('/about', require('./routes/about'));
   app.use('/check', require('./routes/check'));
-  app.use('/data', require('./routes/data'));
-  app.use('/sunburst', require('./routes/sunburst'));
-  app.use('/terms-of-use', require('./routes/terms-of-use'));
+  app.use('/contact', require('./routes/contact'));
   app.use('/result', require('./routes/result'));
 
 };
