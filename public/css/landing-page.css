@@ -34,12 +34,21 @@ h6 {
     background: url(../images/banner-bg.jpg) no-repeat center center;
     background-size: cover;
 }
+
 .intro-header-l{
     padding-top: 50px;
     padding-bottom: 15px;
     text-align: center;
     color: #f8f8f8;
     background-size: cover;
+}
+.navbar-default .navbar-nav > li > a{
+    color:black;
+}
+.navbar{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background: #1AB394;
 }
 .navbar-default2 {
     background-color: transparent;
